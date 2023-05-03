@@ -1,0 +1,142 @@
+<script>
+    /*1  - comment : không hiển thị lên trình duyệt
+     có tác dụng giải thích code*/
+    alert('hello JS');
+    // 2 - Biến : lữu trữ giá trị , giá trị này có thể thay đổi
+    // + cú pháp khai báo biến : var , let, const
+    // var fullname = 'huynd';
+    // var age = 25;
+    // var address = 'Gia Lâm , Hà Nội';
+    // + quy tắc đặt tên biến : 
+    // - Tên biến phải bắt đầu bằng chữ hoặc  kí tự _
+    // - Tên biến không được trùng với từ khóa có sẵn của ngôn ngữ
+    // - Tên biến trong JS có phân biệt hoa thường
+    // Quy tắc đặt tên biến khi có nhiều từ :
+    var name_of_class = 'php0423e2';
+    //VD :
+    var fullname = 'duc huy';
+    var age = 24;
+    var address =  'HN';
+    document.write('Tên của bạn :'+ fullname);
+    document.write('<br>');
+    document.write('Tuổi của bạn :'+ age);
+    document.write('<br>');
+    document.write('Địa chỉ :'+ address);
+    // 3 HẰNG 
+    // + Là biến tuy nhiên không thể gán lại giá trị khác cho Hằng
+    //(Tên hằng nên viết hoa)
+    const PI = 3.14;
+    // 4 Kiểu dữ liệu : phân loại 1 dữ liệu cụ thể
+    // + number : lưu các giá trị số : số nguyên và số thực
+    var age = 33;
+    var number1 = 1.33;
+    var number2 = -33;
+    // Hàm debug :  hiển thị thông tin để giúp cho việc fixbug về sau
+    console.log(typeof number2);
+    // + string : lưu 1 chuỗi , giá trị của chuỗi sẽ được
+    // bao bởi dấu nháy đơn hoặc nháy kép
+    var str1 = 'Chuỗi 1';
+    var str2 = "chuôi 2";
+    var test = "123";
+    var str3 = "Chào bạn 'duc huy'";//chào bạn 'duc huy'
+    console.log(typeof str3); //string
+    // Cú pháp nối chuỗi : +
+    var str4 = str1 + str2;
+    // + boolean : lưu giá trị đúng sai , chí có 2 giá trị duy nhất true và false
+    var is_male = true;
+    var is_female = false;
+    // True , false trong js phải được viết thường hết
+    // var is_test = True; //sai cú pháp
+    // + underfined : xảy ra khi khai báo biến mà không gán giá trị -> cần tránh
+    var name;
+    console.log(typeof name); //underfined
+    // + array : kiểu mang ,lưu trữ nhiều giá trị tại 1 thời điểm và các giá trị có thể là bất cứ dữ 
+    // liệ nào , kể cả mảng
+    var name = ['a','b','c'];
+    var test = [123 ,'abc',true,undefined,[]];
+    // + object : kiểu đối tượng . bao gồm thuộc tính và phương thức
+    var person = {
+        name: 'duc huy',
+        age : 24,
+        run:function(){
+            console.log('running')
+        }
+    };
+    // KIỂU DỮ LIỆU NGUYÊN THỦY : number, string, boolean là các kiểu dữ liệu không có 
+    // cấu trúc , có thể tính toán được
+    // 5 HÀM : 
+    // + Là tập hợp dòng code để xử lý logic
+    // + Chức năng quan trong nhất của hàm : sử dụng lại
+    // Nếu 1 chức năng mà được sử dụng từ 2 lần trở lên thì sử dụng hàm 
+    var number1 = 2;
+    var number2 = 3;
+    var sum1 = number1 + number2;//
+    console.log(sum1); //5
+    // - Có 2 dạng hàm : 
+    // + Hàm có sẵn bởi ngôn ngũ lập trình
+    // + Hàm tự định nghĩa : 
+    // Cú pháp :
+    function show(){
+        console.log('hàm show');
+    }
+// cần gọi hàm để được thực thi
+show();
+// Quy tắc đặt tên hàm khi hàm gồm nhiều từ
+// getMyFullname -> camel
+// - Các loại hàm tự định nghĩa : 3 loại
+// + Hàm không có tham số , không có giá trị trả về :
+// function test(){
+//     console.log('hàm test');
+// }
+// test();
+//+ Hàm có tham số , không có giá trị trả về 
+// VD : viết hàm tính tổng 2 số 
+// Xác định tham số của hàm nếu có : tham số là 1 biến không mang giá trị cụ thể nào , 
+// dựa vào bài toán để xđ tham số 
+function sumNumber(number1,number2){
+    var sum = number1 + number2;
+    console.log('Tổng = ' + sum);
+}
+//Gọi hàm là lúc truyền giá trị cụ thể cho tham số của hàm
+sumNumber(2,5); //Tổng = 7
+// VD : viết hàm hiển thị tên của ai đó 
+// XĐ tham số : 1 tham số
+function showName(name){
+    console.log(name);
+}
+showName('huy');
+showName('HEHEHE');
+// + Hàm có tham số , có giá trị trả về 
+// VD : Viết hàm tính tổng 2 số:
+// XĐ tham số : 2 tham số
+// xđ giá trị trả về : là kiểu dữ liệu mong muốn trả về của hàm
+function sumNumber2(num1 ,num2){
+    var sum = num1 + num2;
+    return sum;
+}
+// Hàm có giá trị trả về thì khi gọi gàm sẽ tương đương với 1 giá trị cụ thể
+var s1 = sumNumber2(1,2);
+console.log(s1);
+var s2 = s1 + 4;
+var s3 = s1 - 4;
+// Hàm có giá trị trả về giúp linh hoạt khi xử lý kết quả trả về từ việc gọi hàm
+// VD : viết hàm hiển thị tên của ai đó
+// XĐ tham số : 1 tham số
+// XĐ giá trị trả về : string
+function showFullname1(fullname){
+    var result = "Tên của bạn:" + fullname;
+    // từ khóa return trong hàm có 2 tác dụng : 
+    // + làm cho giá trị trả về
+    // + Kết thúc hàm, các code phía sau return không bao giờ đc thực thi
+    return result;
+    console.log('text test');
+}
+var res1 = showFullname1('HUy');
+console.log(res1);
+// => nên viết hàm theo hướng có tham số và có gí trị trả về
+var x = 2;
+
+    var x = 3;
+
+console.log(x);
+</script>

@@ -1,0 +1,82 @@
+
+operator.html
+Toán tử trong lập trình
+- Là các kỹ hiệu giúp tính toán các biểuthuwcs
+    3 + 2 = 5
+        => 3,2 là số hạng
+        => + là toán tử
+<script>
+    // 1. Toán tử số học: tính toán các giá trị các số hojc, kết quả trả về sẽ là Number
+    var number1 = 5;
+    var number2 = 2;
+    //phép cộng: +
+    var res1 = number1 + number2; // 7
+    // Phép trừ: - 
+    var res2 = number1 - number2; // 3
+    // Phép nhân: x .
+    var res3 = number1 * number2; // 10
+    // Phép chia: / 
+    var res4 = number1 / number2; // 2.5
+    // Phép chia lấy dư
+    var res5 = number1 % number2; //1
+    // Tăng giảm tích lũy : ++ -- , tặng
+    // giảm 1 đơn vị
+    var number = 5;
+    number++;
+    ++number;
+    // Nếu ++ -- đứng trước biến sẽ thay đổi trước và ngươc lại
+
+    console.log(number); //6
+    var num = 3;
+    var result = number++ - number--
+    var x = 5;
+    var test = x++ - 2 + ++x;
+    var x = 2;
+    var sum = x * x - --x * 2 + x++ - x + ++x;
+
+    // Toán tử so sánh : so sánh các biểu thức và trả về boolean
+    // Lớn hơn : >
+    var test1 = 3 > 2;//true
+    // Lớn hơn hoặc bặng : >=
+    var test2 = 2 >= 2;//true
+    // Nhỏ hơn : < 
+    // Nhỏ hơn hoặc bằng : <=
+    // So sánh bằng : ==
+    var test3 = (1 == 2);
+// so sánh === so sánh về cả giá trị và kiểu dữ liệu
+var test4 = ( 1 == '1'); //true
+var test5 = (1 === '1'); // false
+// So sánh khác : !=
+var test6 = (2 != 1); //true
+// Toán tử logic :  kết hợp nhiều biết thức so sánh , kết quả trả 
+// về boolean
+// + && : and
+//true && true = true
+//true & false = false
+// 
+var test1 = (3>0) && (3 >= 3);
+ // + || : or
+ // true || true = true
+ // true || false = true
+ // false || true = true
+ // false || false = false
+ var test = (1 < 1) || (2 < 2);//false
+ // + !: not ( phủ định)
+ //!true = false
+ // !false = true
+ var test3 = !(1 > 0); // false
+ // Toán tử gán :
+ // =
+ var x = 5;
+ // Cộng tích lũy +=
+ x += 3 ;// x = x + 3 = 8
+ // Trừ tích ũy -=
+ x -= 2; // x = x - 2 = 6
+ // Nhân tích lũy : *=
+ x *= 3; // x = x * 3 = 18
+ // Chia tích lũy /=
+ x /= 2;// x = x / 2 = 9
+ // Chia lấy dư tích lũy %= 
+ x %= 3 ; //x = x % 3 = 0
+
+</script>
